@@ -1,0 +1,189 @@
+:root{--calculator-font: 'Orbitron', sans-serif;
+
+    --light: white;
+    --background-color: #141519;
+    
+    --btn-num-color: #4E4848;
+    --btn-c-color: #FF6340;
+    --btn-dot-color: #34313A;
+    --btn-operator-color: #452C6D;
+    --btn-equals-color: #40FF69;
+}
+    
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    align-items: center;
+    color: var(--light);
+    background: var(--background-color);
+    display: flex;
+    font-family: var(--calculator-font);
+    min-height: 100vh;
+}
+
+button{
+    font-family: var(--calculator-font);
+    color:white;
+}
+
+.flex{
+    display: flex;
+}
+
+.key{
+    flex: 1;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.copyright {
+    font-size: 12px;
+    color: #aaaaaa;
+    padding: 20px;
+}
+
+.calculator {
+    width: 400px;
+    margin: 30px auto;
+    -webkit-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 25px -5px rgba(0,0,0,0.75);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.calculator__display {
+    font-size: 64px;
+    padding: 30px;
+    text-shadow: 0px 0px 6px rgba(255, 255, 255, 0.5);
+    background: #0c0c14;
+    background: -moz-linear-gradient(-45deg,  #0c0c14 64%, #3b3944 64%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #0c0c14 64%,#3b3944 64%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #0c0c14 64%,#3b3944 64%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0c0c14', endColorstr='#3b3944',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    border-top: 2px solid #777777;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    min-height: 166px;
+
+    text-align: right;
+}
+
+.text-small {
+    font-size: 42px;
+}
+
+.text-smaller {
+    font-size: 36px;
+}
+
+.text-smallest {
+    font-size: 28px;
+}
+
+.answer {
+    color: lighten(var(--btn-equals-color), 10%);
+    text-shadow: 0px 0px 6px var(--btn-equals-color) ;
+}
+
+.error {
+    color: lighten(var(--btn-c-color), 10%);
+    text-shadow: 0px 0px 6px var(--btn-c-color);
+}
+
+.calculator__keys{
+    background: #0c0c14;
+    padding: 10px 10px 10px 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.key{
+    font-size: 24px;
+    padding: 25px 10px 10px 10px;
+    text-align: right;
+    transition: all 0.2s;
+    border-radius: 8px;
+    margin: 8px;
+    -webkit-user-select: none; /* Chrome/Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+}
+
+.key:hover {
+    cursor: pointer;
+}
+
+.key:active {
+    background-color: #fffefc !important;
+    color: var(--btn-num-color);
+    -webkit-box-shadow: 0px 0px 11px 2px rgba(255,254,252,0.5);
+    -moz-box-shadow: 0px 0px 11px 2px rgba(255,254,252,0.5);
+    box-shadow: 0px 0px 11px 2px rgba(255,254,252,0.5);
+}
+
+.key-num {
+    background-color: var(--btn-num-color);
+    border-top: 1px solid lighten(var(--btn-num-color), 10%);
+    border-left: 1px solid darken(var(--btn-num-color), 10%);
+    border-right: 1px solid darken(var(--btn-num-color), 10%);
+}
+    
+.key-num:hover {
+    background-color: lighten(var(--btn-num-color), 10%);
+}
+
+.clear {
+    background-color: var(--btn-c-color);
+    color: darken(var(--btn-c-color), 40%);
+    border-top: 1px solid lighten(var(--btn-c-color), 10%);
+    border-left: 1px solid darken(var(--btn-c-color), 10%);
+    border-right: 1px solid darken(var(--btn-c-color), 10%);
+}
+
+.clear:hover {
+    background-color: lighten(var(--btn-c-color), 10%);
+}
+
+.decimal {
+    background-color: var(--btn-dot-color);
+    border-top: 1px solid lighten(var(--btn-dot-color), 10%);
+    border-left: 1px solid darken(var(--btn-dot-color), 10%);
+    border-right: 1px solid darken(var(--btn-dot-color), 10%);
+}
+
+.decimal:hover {
+    background-color: lighten(var(--btn-dot-color), 10%);
+}
+
+.key--operator {
+    background-color: var(--btn-operator-color);
+    border-top: 1px solid lighten(var(--btn-operator-color), 10%);
+    border-left: 1px solid darken(var(--btn-operator-color), 10%);
+    border-right: 1px solid darken(var(--btn-operator-color), 10%);
+}
+   
+.key--operator:hover {
+    background-color: lighten(var(--btn-operator-color), 10%);
+}
+
+.calculate {
+    background-color: var(--btn-equals-color);
+    color: darken(var(--btn-equals-color), 40%);
+    border-top: 1px solid lighten(var(--btn-equals-color), 10%);
+    border-left: 1px solid darken(var(--btn-equals-color), 10%);
+    border-right: 1px solid darken(var(--btn-equals-color), 10%);
+}
+
+.calculate:hover {
+    background-color: lighten(var(--btn-equals-color), 10%);
+}
